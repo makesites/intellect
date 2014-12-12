@@ -1,0 +1,22 @@
+{
+	"name": "intellect",
+	"description": "Framework to construct machine intelligence",
+	"version": "0.0.1",
+	"author": "makesites",
+	"contributors": [
+		{ "name": "Makis Tracend", "email": "makis@makesit.es" }
+	],
+	"homepage": "http://makesites.org",
+	"keywords": ["intellect ", "intelligence", "pnoi", "ai"],
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/makesites/intellect.git"
+	},
+	"engines": { "node": ">=0.8.x" },
+	"main": "index",
+	"bin": { },
+	"dependencies": {
+		"underscore": "*",
+		"async": "*"
+	}
+}

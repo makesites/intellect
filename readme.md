@@ -13,7 +13,14 @@ npm install intellect
 
 ## Usage
 
-...
+```
+var intellect = require("intellect"),
+	math = require("");
+
+
+intellect.use
+```
+
 
 ## Options
 
@@ -25,9 +32,9 @@ npm install intellect
 
 Initiated by [Makis Tracend](http://github.com/tracend)
 
-Part of [PN:OI](http://pnoi.net/) by [K&D Interactive](http://kdi.co/)
+Distributed through [Makesites.org](http://makesites.org)
 
 
 ## License
 
-Released under the [MIT license](http://makesites.org/licenses/MIT)
+Released under the [MPL v2.0](http://www.mozilla.org/MPL/2.0/) & [AGPL](http://www.gnu.org/licenses/agpl.html)

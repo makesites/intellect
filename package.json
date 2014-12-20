@@ -8,6 +8,16 @@
 	],
 	"homepage": "http://makesites.org",
 	"keywords": ["intellect ", "intelligence", "pnoi", "ai"],
+	"licenses": [
+		{
+			"type": "MPL v2.0",
+			"url": "http://www.mozilla.org/MPL/2.0/"
+		},
+		{
+			"type": "AGPL",
+			"url": "http://www.gnu.org/licenses/agpl.html"
+		}
+	],
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/makesites/intellect.git"

@@ -16,7 +16,7 @@ var intellect = Intellect( options );
 // middleware
 intellect.use( math() );
 
-var result; // variable will store the result
+var result = null; // variable will store the result
 
 // APP
 var app = connect()
@@ -28,23 +28,23 @@ var app = connect()
 	.use(function(req, res, next){
 		// output markup
 		var html = "<html><body>";
-		if( result ) html += "<h1>Result: "+ result +"</h1>";
-		html += "<h1>Result: "+ result +"</h1>";
+		if( result !== null ) html += "<h1>Result: "+ result +"</h1>";
 		html += '<form action="/">';
 		html += '<input type="text" name="equation" placeholder="what do you want to calculate?"></p>';
 		html += "</form></body></html>";
-		res.send( html );
-		res.end();
+		res.end( html );
 	});
 
 
 // Helper
 function calculate( equation, callback ){
 
-	intellect.process( equation, callback( req, res ){
-			var result = res.data;
+	intellect.process( equation, function( req, res ){
+		console.log( res );
+			result = res.data || null;
 			callback();
 	});
+	callback();
 
 }
 

@@ -23,7 +23,7 @@ var Intellect = require("intellect"),
 var intellect = Intellect( options );
 
 // middleware
-intellect.use(math);
+intellect.use( math() );
 
 // then later, in the context of a request
 intellect.process(data, function(req, res){

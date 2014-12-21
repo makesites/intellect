@@ -13,6 +13,9 @@ var options = {
 // init Intellect
 var intellect = Intellect( options );
 
+// middleware
+intellect.use( math() );
+
 var result; // variable will store the result
 
 // APP

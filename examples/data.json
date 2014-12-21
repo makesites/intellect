@@ -1,0 +1,28 @@
+[
+	{
+		"text": "I am a bot",
+		"audio": "/path/to/file",
+		"type": "awareness",
+		"tags": [
+			"name"
+		]
+	},
+	{
+		"text": "I am fine",
+		"audio": "/path/to/file",
+		"type": "awareness",
+		"tags": [
+			"condition",
+			"positive",
+			"mild"
+		]
+	},
+	{
+		"text": "Blue",
+		"audio": "/path/to/file",
+		"type": "preference",
+		"tags": [
+			"color"
+		]
+	}
+]

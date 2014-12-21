@@ -26,7 +26,7 @@ var intellect = Intellect( options );
 intellect.use(math);
 
 // then later, in the context of a request
-intellect(data, function(req, res){
+intellect.process(data, function(req, res){
 	// req, res are created by intellect (not extending express objects)
 	// response is saved in res.data
 	console.log( res.data );

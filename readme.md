@@ -1,6 +1,6 @@
 # Intellect
 
-
+Allowing a computer to understand and interpret a request and respond accordingly.
 
 
 ## Install
@@ -13,16 +13,36 @@ npm install intellect
 
 ## Usage
 
+The core library is a skeleton facilitating for the arbitrary inclusion of logic processes, using a middleware architecture.
+
 ```
-var intellect = require("intellect"),
-	math = require("");
+var Intellect = require("intellect"),
+	math = require("intellect-math");
 
+// init Intellect
+var intellect = Intellect( options );
 
-intellect.use
+// middleware
+intellect.use(math);
+
+// then later, in the context of a request
+intellect(data, function(req, res){
+	// req, res are created by intellect (not extending express objects)
+	// response is saved in res.data
+	console.log( res.data );
+});
+
 ```
 
 
 ## Options
+
+
+## Middleware
+
+
+## Interpreter
+
 
 
 ## Showcase

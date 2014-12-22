@@ -40,11 +40,9 @@ var app = connect()
 function calculate( equation, callback ){
 
 	intellect.process( equation, function( req, res ){
-		console.log( res );
-			result = res.data || null;
-			callback();
+		result = res.data || null;
+		callback();
 	});
-	callback();
 
 }
 

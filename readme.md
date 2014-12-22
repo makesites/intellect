@@ -57,7 +57,6 @@ Each middleware can affect both the request and the response object; defining on
 Officially supported modules are available at: [https://github.com/intellect-modules](https://github.com/intellect-modules)
 
 
-
 ## Interpreter
 
 After the request is processed and the middleware have completed "tweaking" the response's meta data, picking the right dialog line is the final step. To allow the selection in a non-restrictive manner, there are two distinct methods this can be achieved:
@@ -68,7 +67,7 @@ When an interpreter method is included in the options, the library enters "passi
 
 ### Active Mode
 
-In this mode the lib will attmept to pick a specific response. To achieve that it will expect the data fed using a specific schema, like this:
+In this mode the lib will attempt to pick a specific response. To achieve that it will expect the data fed using a specific schema, like this:
 
 ```
 {
@@ -80,6 +79,7 @@ In this mode the lib will attmept to pick a specific response. To achieve that i
 	]
 }
 ```
+If this mode seems too restrictive the former mode is recommended.
 
 
 ## Credits

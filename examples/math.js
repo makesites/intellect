@@ -7,7 +7,12 @@ var Intellect = require("../index"), // use instead: require("intellect")
 	math = require("intellect-math");
 
 var options = {
-		// nothing to add for now...
+		// this method controls what data is returned
+		interpreter: function( req, res, next ){
+			// in this simple example the data is obvious
+			res.data = res.results.math;
+			next();
+		}
 	};
 
 // init Intellect
@@ -23,14 +28,16 @@ var app = connect()
 	.use(function(req, res, next){
 		// perform logic actions
 		var params = querystring.parse( req._parsedUrl.query );
+		// continue only if we have data to process
+		if(! params.equation ) return next();
 		calculate( params.equation, next)
 	})
 	.use(function(req, res, next){
 		// output markup
-		var html = "<html><body>";
+		var html = '<html><body style="text-align: center; font-size: 200%">';
 		if( result !== null ) html += "<h1>Result: "+ result +"</h1>";
 		html += '<form action="/">';
-		html += '<input type="text" name="equation" placeholder="what do you want to calculate?"></p>';
+		html += '<input type="text" name="equation" placeholder="what to calculate:" style="font-size: 200%">';
 		html += "</form></body></html>";
 		res.end( html );
 	});
@@ -38,12 +45,10 @@ var app = connect()
 
 // Helper
 function calculate( equation, callback ){
-
 	intellect.process( equation, function( req, res ){
 		result = res.data || null;
 		callback();
 	});
-
 }
 
 

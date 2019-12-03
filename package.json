@@ -22,7 +22,7 @@
 		"type": "git",
 		"url": "git://github.com/makesites/intellect.git"
 	},
-	"engines": { "node": ">=0.8.x" },
+	"engines": { "node": ">=10.x.x" },
 	"main": "index",
 	"bin": { },
 	"dependencies": {

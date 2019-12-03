@@ -1,6 +1,6 @@
 # Intellect
 
-Allowing a computer to understand and interpret a request and respond accordingly.
+A framework to allow a computer to understand and interpret a request and respond accordingly. With an open-ended custom ruleset and a middleware plugin architecture, a developer can build their own custom flavor of intelligence, effectively enabling the construction of a diverse range of artificial intelligence.
 
 
 ## Install
